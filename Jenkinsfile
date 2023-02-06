@@ -1,8 +1,8 @@
-pipeline{
+pipeline {
     agent any  
-    stages{
-        stage("Sonar quality check"){
-            agent{
+    stages {
+        stage ("Sonar quality check") {
+            agent {
                 docker {
                     image 'openjdk:11'
                 }
