@@ -5,6 +5,9 @@ pipeline {
             agent {
                 docker {
                     image 'openjdk:11'
+                    RUN mkdir /home/.sonar
+                    RUN chmod 777 /home/.sonar
+                    ENV SONAR_USER_HOME=/home/.sonar
                 }
             }
             steps{
